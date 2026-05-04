@@ -1,71 +1,149 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Contacto</title>
+<meta charset="UTF-8">
+<title>Contacto</title>
 
-  <style>
-    body {
-      margin: 0;
-      padding-top: 50px;
-      background-color: #f0d0ed;
-      color: rgb(0, 0, 0);
-      font-family: Arial, sans-serif;
-      text-align: center;
-    }
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background-color: rgba(163, 121, 42, 0.649);
+    font-family: "Century Gothic", "Trebuchet MS", Arial, sans-serif;
+    color: #111;
+  }
 
-    h1 {
-      font-size: 50px;
-    }
+  .panel {
+    width: 82%;
+    max-width: 980px;
+    height: 470px;
+    margin: 90px auto;
+    background: rgba(255, 255, 255, 0.92);
+    position: relative;
+    overflow: hidden;
+  }
 
-    p {
-      font-size: 20px;
-      color: rgb(0, 0, 0);
-      text-align: center;
-    }
+  /* título arriba izquierda */
+  h1 {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
 
-    img {
-      width: 40%;
+  /* menú arriba derecha */
+  .menu {
+    position: absolute;
+    top: 34px;
+    right: 28px;
+  }
+
+  .menu a {
+    margin-left: 18px;
+    color: #111;
+    font-size: 14px;
+    text-decoration: none;
+    letter-spacing: 0.2px;
+  }
+
+  .menu a:hover {
+    opacity: 0.65;
+  }
+
+  /* imagen central tipo fondo/flor */
+  .fondo {
+    position: absolute;
+    width: 52%;
+    left: 50%;
+    top: 54%;
+    transform: translate(-50%, -50%);
+    opacity: 0.95;
+  }
+
+  /* datos de contacto al centro */
+  .contacto {
+    position: absolute;
+    left: 50%;
+    top: 48%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+  }
+
+  .contacto p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .contacto a {
+    color: #111;
+    text-decoration: none;
+  }
+
+  .contacto a:hover {
+    opacity: 0.65;
+  }
+
+  @media (max-width: 900px) {
+    .panel {
+      width: 90%;
       height: auto;
+      padding: 100px 20px 60px 20px;
+    }
+
+    h1,
+    .menu,
+    .fondo,
+    .contacto {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      transform: none;
+    }
+
+    .menu {
+      margin-top: 10px;
+      text-align: right;
+    }
+
+    .fondo {
+      width: 75%;
       display: block;
       margin: 30px auto;
     }
 
-    .menu {
-      margin-top: 20px;
+    .contacto {
+      text-align: center;
+      margin-top: 10px;
     }
-
-    .menu a {
-      color: white;
-      font-size: 24px;
-      margin: 20px;
-      text-decoration: none;
-    }
-
-    .menu a:hover {
-      text-decoration: underline;
-    }
-  </style>
-
+  }
+</style>
 </head>
 
 <body>
 
+<div class="panel">
+
   <h1>Contacto</h1>
-
-  <img src="img1.png" alt="imagen">
-
-  <p>
-    INSTAGRAM: xdra_aka222 <br>
-    CORREO: alexandra.escalante.r@gmail.com
-  </p>
 
   <div class="menu">
     <a href="index.html">Inicio</a>
-    <a href="obra.html">Mis obras</a>
+    <a href="obras.html">Mis obras</a>
   </div>
 
-</body>
+  <img class="fondo" src="img1.png" alt="imagen">
 
+  <div class="contacto">
+    <p><a href="https://instagram.com/xdra_aka222" target="_blank">INSTAGRAM</a></p>
+    <p><a href="mailto:alexandra.escalante.r@gmail.com">CORREO</a></p>
+  </div>
+
+</div>
+
+</body>
 </html>

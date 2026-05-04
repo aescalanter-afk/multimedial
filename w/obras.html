@@ -1,87 +1,203 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-<title>obras</title>
-</head>
+<meta charset="UTF-8">
+<title>Obras</title>
 
 <style>
-        /* Estilo general del cuerpo */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f7c7e7;
-            margin: 0;
-        }
+  body {
+    margin: 0;
+    background-color: rgba(163, 121, 42, 0.649);
+    font-family: "Century Gothic", "Trebuchet MS", Arial, sans-serif;
+    color: #111;
+  }
 
-        /* Contenedor principal */
-        .contenedor {
-            width: 80%;
-            margin: auto;
-        }
+  .contenedor {
+    width: 78%;
+    margin: 60px auto;
+  }
 
-        /* Sección o bloque */
-        .bloque {
-            background-color: rgb(255, 255, 255);
-            margin: 100px 0;
-            padding: 100px;
-            border-radius: 10px;
-            text-align: center;
-        }
+  .bloque {
+    background: rgba(255, 255, 255, 0.95);
+    margin: 70px 0;
+    padding: 42px;
+    box-sizing: border-box;
+  }
 
-        .bloque img {
-            width: 40%;
-            height: auto;
-            margin: 50px 0;
-        }
+  .obra {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+  }
 
-        .bloque h2 {
-            margin-top: 10px;
-        }
+  .texto {
+    width: 28%;
+  }
 
-        .bloque p {
-            line-height: 1.5;
-        }
-    </style>
+  .texto h2 {
+    margin: 0 0 16px 0;
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 1.05;
+  }
+
+  .texto p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 14px;
+  }
+
+  .anio {
+    font-size: 15px;
+  }
+
+  /* --- bloque con 2 imágenes --- */
+  .superpuestas {
+    position: relative;
+    width: 72%;
+    min-height: 520px;
+  }
+
+  .superpuestas .imagen-principal {
+    width: 78%;
+    display: block;
+  }
+
+  .superpuestas .imagen-encima {
+    position: absolute;
+    width: 34%;
+    right: 0;
+    bottom: 40px;
+  }
+
+  /* --- bloques con 3 imágenes --- */
+  .composicion-tres {
+    position: relative;
+    width: 72%;
+    min-height: 560px;
+  }
+
+  .fila-grande {
+    display: flex;
+    gap: 18px;
+    width: 82%;
+  }
+
+  .fila-grande img {
+    width: calc(50% - 9px);
+    height: auto;
+    display: block;
+  }
+
+  .imagen-montada {
+    position: absolute;
+    width: 34%;
+    right: 0;
+    bottom: 45px;
+  }
+
+  @media (max-width: 900px) {
+    .obra {
+      flex-direction: column;
+    }
+
+    .texto,
+    .superpuestas,
+    .composicion-tres {
+      width: 100%;
+    }
+
+    .superpuestas,
+    .composicion-tres {
+      min-height: auto;
+    }
+
+    .superpuestas .imagen-principal,
+    .fila-grande {
+      width: 100%;
+    }
+
+    .superpuestas .imagen-encima,
+    .imagen-montada {
+      position: relative;
+      width: 45%;
+      right: auto;
+      bottom: auto;
+      margin-top: 15px;
+    }
+
+    .fila-grande {
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .fila-grande img {
+      width: 100%;
+    }
+  }
+</style>
 </head>
 
 <body>
 
-    <div class="contenedor">
+<div class="contenedor">
 
-        <!-- BLOQUE 1 -->
-        <div class="bloque">
-            <img src="img/1.jpg" alt="Descripción de la imagen">
-            <img src="img/2.jpg" alt="Descripción de la imagen">
-            <h2>"Latente"</h2>
-            <p>
-            En cada palabra hay una promesa, una presencia y un refugio.
-            </p>
-        </div>
+  <!-- BLOQUE 1 -->
+  <div class="bloque">
+    <div class="obra">
+      <div class="texto">
+        <h2>"Latente"</h2>
+        <p>En cada palabra hay una promesa, una presencia y un refugio.</p>
+        <div class="anio">2025</div>
+      </div>
 
-        <!-- BLOQUE 2 -->
-        <div class="bloque">
-            <img src="img/4.jpg" alt="Descripción de la imagen">
-            <img src="img/3.jpg" alt="Descripción de la imagen">
-            <img src="img/5.jpg" alt="Descripción de la imagen">
-            <h2>Título </h2>
-            <p>
-               
-            </p>
-        </div>
-
-        <!-- BLOQUE 3 -->
-        <div class="bloque">
-            <img src="img/6.jpg" alt="Descripción de la imagen">
-            <img src="img/8.jpg" alt="Descripción de la imagen">
-            <img src="img/7.jpg" alt="Descripción de la imagen">
-            <h2>"Con la cuchara del silencio"</h2>
-            <p>
-              ¿Que parte del amor que nos dimos fue realmente libre?. 
-        
-            </p>
-        </div>
-
+      <div class="superpuestas">
+        <img class="imagen-principal" src="img/1.jpg" alt="Latente">
+        <img class="imagen-encima" src="img/2.jpg" alt="Latente">
+      </div>
     </div>
+  </div>
+
+  <!-- BLOQUE 2 -->
+  <div class="bloque">
+    <div class="obra">
+      <div class="texto">
+        <h2>Sin título</h2>
+        <div class="anio">2026</div>
+      </div>
+
+      <div class="composicion-tres">
+        <div class="fila-grande">
+          <img src="img/4.jpg" alt="Sin título">
+          <img src="img/3.jpg" alt="Sin título">
+        </div>
+
+        <img class="imagen-montada" src="img/5.jpg" alt="Sin título">
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOQUE 3 -->
+  <div class="bloque">
+    <div class="obra">
+      <div class="texto">
+        <h2>"Con la cuchara del silencio"</h2>
+        <p>¿Qué parte del amor que nos dimos fue realmente libre?</p>
+        <div class="anio">2025</div>
+      </div>
+
+      <div class="composicion-tres">
+        <div class="fila-grande">
+          <img src="img/8.jpg" alt="Con la cuchara del silencio">
+          <img src="img/7.jpg" alt="Con la cuchara del silencio">
+        </div>
+
+        <img class="imagen-montada" src="img/6.jpg" alt="Con la cuchara del silencio">
+      </div>
+    </div>
+  </div>
+
+</div>
 
 </body>
 </html>

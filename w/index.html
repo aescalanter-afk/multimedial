@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 <meta charset="UTF-8">
 <title>Alexandra Escalante</title>
 
-
 <style>
-  body {
-  margin: 0;
-  padding-top: 50 px;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  color: white;
-
-  background-image: 
-    linear-gradient(rgba(251, 212, 248, 0.684), rgba(245, 212, 243, 0.525)),
-    url("img/1.jpg");
+  html, body {
+    margin: 0;
+    width: 100%;
     height: 100%;
+  }
 
-  background-size: 110%;
-  background-position: 4% 8%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-    }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+    color: white;
 
-    a {
-      display: block;
-      margin: 10px;
-      color: black;
-      text-decoration: none;
-      font-size: 18px;
-    }
+    background-image:
+      linear-gradient(rgba(163, 121, 42, 0.808), rgba(163, 121, 42, 0.808)),
+      url("img/1.jpg");
 
-    a:hover {
-      text-decoration: underline;
-    }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
 
+  /* nombre principal */
+  .titulo {
+    position: absolute;
+    top: 42%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: "Century Gothic", "Trebuchet MS", Arial, sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 0.4px;
+    color: white;
+    white-space: nowrap;
+  }
+
+  /* menú inferior */
+  nav {
+    position: absolute;
+    bottom: 32px;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 22px;
+
+    font-family: "Century Gothic", "Trebuchet MS", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+
+    color: white;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    opacity: 0.75;
+  }
 </style>
-<!-- Fin de la sección de estilos -->
-
 </head>
-<!-- Fin de la sección head -->
 
 <body>
-<!-- Inicio del contenido visible de la página -->
 
-<h1>Alexandra Escalante</h1>
-<br><br>
-<!-- Texto que aparece en el centro de la pantalla -->
+<div class="titulo">Alexandra Escalante</div>
 
-<a href="obras.html">obras</a>
-<a href="contacto.html">contacto</a>
+<nav>
+  <a href="obras.html">Obras</a>
+  <a href="contacto.html">Contacto</a>
+</nav>
 
 </body>
-<!-- Fin del contenido visible -->
-
 </html>
-<!-- Fin del documento HTML -->
